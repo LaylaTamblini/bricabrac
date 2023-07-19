@@ -1,0 +1,23 @@
+@mixin debug {
+    border: 1px red solid;
+}
+
+//
+
+@mixin set_flex($direction,$justify,$align){
+    display: flex;
+    // column or row
+    flex-direction: $direction;
+    // center, flex-end/start, space-betweeen, space-around
+    justify-content: $justify;
+    // center, flex-end/start
+    align-items: $align;
+}
+
+//
+
+@mixin breakpoint_min($screen){
+    @media (min-width: #{$screen}px){
+        @content;
+    }
+}
